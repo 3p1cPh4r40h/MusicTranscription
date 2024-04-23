@@ -30,10 +30,7 @@ Songs have a variable number of tracks:
 How do we know which notes are relevant?
 
     - As previously mentioned, some instruments can be removed from consideration (such as drums).
-    - We can also look at the length or frequency a note is played in a bar, louder, frequent or longer notes
-    should have a higher weight for relevance to a chord label. This is because quite, infrequent and faster
-    notes have less impact on the bar, and thus do not have as much impact on the interpretation of a chord
-    (in general terms).
+    - We can also look at the length or frequency a note is played in a bar, louder, frequent or longer notes should have a higher weight for relevance to a chord label. This is because quite, infrequent and faster notes have less impact on the bar, and thus do not have as much impact on the interpretation of a chord (in general terms).
 
 How and where to determine the BPM?
 
@@ -44,7 +41,7 @@ We do not have extensive research on chord retrieval (or chord transcription) on
 
     - HOWEVER, we know that CNNs can work well on categorization tasks AND RNNs work well on sequential data:
         - i.e. a combination of CNN and RNN should work for chord transcription, reducing the dimensionality of the MIDI result
-        - Hopefully this will allow us to get far more correct answers with far less resources than the use of (for example) a deep network of dense layers
+        - Hopefully this will allow us to get far more correct answers with far less resources than the use of (for example a deep network of dense layers
 
 Research shows that RNN/CNN combination performs well on single instrument polyphonic recordings.
 
@@ -57,21 +54,20 @@ Hypothesis:
 ## Key Questions:
 How should chords be labeled and what mechanism should be used for interpreting chords?
 
-    - The labeling of chords is systematic, focusing on the number of notes and their relative distance from
-    the root note.
+    - The labeling of chords is systematic, focusing on the number of notes and their relative distance from the root note.
     - Chords can thus be labeled based on a mapping of MIDI notes and their relative distance to chord labels.
 
 What should the final output look like?
 
-    - As of right now the ideal would be to have a chord sheet that is separated into bars; this requires an element
-    of BPM and rhythm analysis, or for the BPM and rhythm to be a part of the data. For training purposes we will need
-    data with rhythm information either way.
+    - As of right now the ideal would be to have a chord sheet that is separated into bars; this requires an element of BPM and rhythm analysis, or for the BPM and rhythm to be a part of the data. For training purposes we will need data with rhythm information either way.
 
 Why is chord analysis the objective?
 
-    - Chord analysis is more abstract than classical music notation, this means that there is often some creative freedom in defining;
-    some people may see a piano piece with a C chord in the left hand and a melody focusing on D in the right and label that as a C9 chord,
-    whereas others would label it a plain C chord.
+    - Chord analysis is more abstract than classical music notation, this means that there is often more creative freedom in defining chords; some people may see a piano piece with a C chord in the left hand and a melody focusing on D in the right and label that as a C9 chord, whereas others would label it a plain C chord.
+
+How will we procure data for training the model to identify chords from MIDI?
+
+    - We can generate midi data from a dataset of chords and chord progressions using a library like `https://code.google.com/archive/p/midiutil/`.
 
 
 # References
