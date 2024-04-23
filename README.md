@@ -21,6 +21,10 @@ This involves training two models:
     - An initial model translates audio into the most relevant MIDI notes needed for harmonic analysis.
     - A second translates the MIDI notes into a set of chords over time.
 
+MIDI files can be interpreted through the mido library as a list of `Message` objects.
+
+    - This format allows us to transition from MIDI, to a list of `Message` objects, and finally to a database of labels and values that the model can interpret.
+
 Songs have a variable number of tracks:
 
     - These tracks can include any synthesized instrument including drums.
