@@ -34,7 +34,7 @@ Songs have a variable number of tracks:
 How do we know which notes are relevant?
 
     - As previously mentioned, some instruments can be removed from consideration (such as drums).
-    - We can also look at the length or frequency a note is played in a bar, louder, frequent or longer notes should have a higher weight for relevance to a chord label. This is because quite, infrequent and faster notes have less impact on the bar, and thus do not have as much impact on the interpretation of a chord (in general terms).
+    - We can also look at the length or frequency a note is played in a bar, louder, frequent or longer notes should have a higher weight for relevance to a chord label. This is because quiet, infrequent and shorter notes have less impact on the bar, and thus do not have as much impact on the interpretation of a chord (in general terms).
 
 How and where to determine the BPM?
 
